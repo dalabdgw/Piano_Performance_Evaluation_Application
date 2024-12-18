@@ -53,3 +53,32 @@ git clone https://github.com/dalabdgw/Piano_Performance_Evaluation_Application.g
 ```bash
 cd Piano_Performance_Evaluation_Application
 ```
+
+3. 파이썬 개발 환경 설정
+'''bash
+pip install -r requirements.txt
+'''
+
+4. 다트 개발 환경 설정
+Flutter 개발 환경이 설정되어 있지 않다면, [Flutter 설치 가이드](https://dart-ko.dev/)를 참고하여 설치하세요.
+
+'''bash
+flutter pub get
+'''
+
+5. 파이썬 플라스크 서버 실행
+'''bash
+python main.py
+'''
+
+
+---
+
+## CI/CD 구축 및 배포 방법(추가 예정)
+
+---
+
+## 유지보수 안내 사항
+
+
+
