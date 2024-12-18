@@ -13,7 +13,7 @@
   ![flask](https://img.shields.io/badge/-flask-092E20?logo=flask&logoColor=white)  ![Swagger](https://img.shields.io/badge/-Swagger-85EA2D?logo=swagger&logoColor=black)  ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 
 - **DevOps**  
-  ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)
+  ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white)  ![AWS](https://img.shields.io/badge/-AWS-181717?logo=AWS&logoColor=white)  ![AWS](https://img.shields.io/badge/-S3-181717?logo=S3&logoColor=white)
 ---
 
 ## 서비스 소개
