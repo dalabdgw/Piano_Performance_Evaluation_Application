@@ -55,22 +55,22 @@ cd Piano_Performance_Evaluation_Application
 ```
 
 3. 파이썬 개발 환경 설정
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
 4. 다트 개발 환경 설정
 Flutter 개발 환경이 설정되어 있지 않다면, [Flutter 설치 가이드](https://dart-ko.dev/)를 참고하여 설치하세요.
 
-'''bash
+```bash
 flutter pub get
-'''
+```
 
 5. 파이썬 플라스크 서버 실행
 
-'''bash
+```bash
 python main.py
-'''
+```
 
 
 ---
