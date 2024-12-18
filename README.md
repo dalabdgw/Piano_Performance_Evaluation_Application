@@ -67,6 +67,7 @@ flutter pub get
 '''
 
 5. 파이썬 플라스크 서버 실행
+
 '''bash
 python main.py
 '''
