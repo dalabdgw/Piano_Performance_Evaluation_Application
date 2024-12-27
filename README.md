@@ -24,18 +24,28 @@
 
 ---
 
-## 주요 기능
+## 주요 기능(상세)
 
-- 10초 단위의 데이터 평가
-- 15가지 항목을 기준으로 평가 지원
+- ### 회원가입 및 로그인
+![이미지 에러](./docs/img/login.PNG)
+- ### 음악 검색
+![이미지 에러](./docs/img/search.PNG)
+- ### 10초 단위의 데이터 평가
+![이미지 에러](./docs/img/10s.PNG)
+- ### 곡 악보 표시 및 재생
+![이미지 에러](./docs/img/score.PNG)
+- ### 15가지 항목을 기준으로 평가 지원
+   - 톤, 레가토, 해석, 프레이징, 멜로디, 음악성(음악적표현력), 보이싱, 음정, 셈여림, 셈여림 변화, 템포, 템포의 변화, 음의 길이와 관련된 아티큘레이션, 리듬, 페달링
+![이미지 에러](./docs/img/evaluation.PNG)
 - 연주자 익명 평가 시스템
-- .CSV형태로의 파일 내보내기 기능
+![이미지 에러](./docs/img/anonymous_evaluation.PNG)
+- SQL을 통해 평가결과 내보내기
 
 ---
 
 ## 서비스 아키텍처
 
-![서비스 아키텍처(추가 예정)](./System_Architecture.png)
+![서비스 아키텍처](./System_Architecture.png)
 
 ---
 
@@ -56,6 +66,7 @@ cd Piano_Performance_Evaluation_Application
 
 3. 파이썬 개발 환경 설정
 ```bash
+python -m venv venv
 pip install -r requirements.txt
 ```
 
@@ -77,9 +88,40 @@ python main.py
 
 ## CI/CD 구축 및 배포 방법(추가 예정)
 
+aws ec2를 통한 배포 및 서비스 제공
+
+빌드 오류를 낮추기 위해서 사용
+```bash
+flutter clean
+```
+빌드 오류를 낮추기 위해서 사용
+
+
+```bash
+flutter pub get
+```
+패키지 적용
+
+```bash
+flutter build
+```
+빌드 파일 생성
+
+
+```bash
+cd ./build/web
+```
+
+```bash
+move web ./backend/templates
+```
+
+
+```bash
+cd ./backend/templates
+```
+
+이하 추가 예정
+
 ---
-
-## 유지보수 안내 사항
-
-
 
