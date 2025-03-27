@@ -45,7 +45,7 @@
 
 ## 서비스 아키텍처
 
-![서비스 아키텍처](/docs/img/service.png)
+![서비스 아키텍처](./docs/img/service.PNG)
 
 ---
 
