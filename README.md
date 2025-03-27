@@ -45,7 +45,7 @@
 
 ## 서비스 아키텍처
 
-![서비스 아키텍처](./System_Architecture.png)
+![서비스 아키텍처](/docs/img/service.png)
 
 ---
 
@@ -121,7 +121,60 @@ move web ./backend/templates
 cd ./backend/templates
 ```
 
-이하 추가 예정
+```bash
+git --version
+```
+깃허브 버전 확인
+- 실행이 안된다면 깃허브 설치 후 시도
+
+```bash
+git --version
+```
+
+```bash
+git add .
+```
+
+혹은
+
+```bash
+git add 파일명.확장자
+```
+
+```bash
+git commit -m "[docs] 배포 버전 업로드"
+```
+커밋 메시지 작성 시
+
+'[작업 카테고리] 작업한 내용' 으로 작성
+
+
+```bash
+git remore -v
+```
+업스트림 확인 후
+
+origin  https://github.com/dalabdgw/Piano_Performance_Evaluation_Application.git (fetch)
+origin  https://github.com/dalabdgw/Piano_Performance_Evaluation_Application.git (push) 
+
+으로 출력되는 경우
+
+```bash
+git push origin main
+```
+만약 업스트림이 다음이 아닌 경우
+
+```bash
+git remote add origin https://github.com/dalabdgw/Piano_Performance_Evaluation_Application.git
+```
+을 사용해서 업스트림 적용 후 업로드 진행
 
 ---
 
+ - aws 보안 설명 및 서버 로그인 하는 방법
+
+aws 콘솔 접속
+ key.pem
+키를 활용해서 윈도우 암호 획득
+
+---
