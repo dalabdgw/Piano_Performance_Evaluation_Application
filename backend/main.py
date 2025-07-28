@@ -170,7 +170,6 @@ def create_app():
             filename = f"{timestamp}_{original_filename}"
             save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(save_path)
-            print(f'받은 곡 정보:{filename}')
 
             return jsonify({'message': '파일 업로드 성공', 'savepath': save_path}), 200
 
@@ -236,9 +235,13 @@ def create_app():
         print('=' * 50)
         print('악보 삽입 시작..')
         score_data = request.json
+
+        print(score_data)
+
         song_id = score_data['song_id']
         song_part_id = score_data['song_part_id']
         score_path_list = score_data['url']
+        print(score_data['url'])
         sequence = score_data['sequence']
         song_name = score_data['song_name']
 
@@ -266,6 +269,12 @@ def create_app():
         song_id = request.args.get('song_id')
         song_part_id = request.args.get('song_part_id')
 
+        print('sequence')
+        print(request.args.get('sequence'))
+        print(request.args.get)
+
+        print('호출')
+
         from database_codes.database import getSongScoreData
 
         try:
@@ -285,12 +294,14 @@ def create_app():
         try:
             user_id = request.args.get('user_id')
             user_pwd = request.args.get('user_pwd')
+            print(request.args.get)
 
             print('로그인 시도: ', user_id, user_pwd)
 
             isLogin = _login(user_id, user_pwd)
 
             if isLogin == 1:
+                print('로그인 실패')
                 return jsonify(
                     {'message': '로그인 실패(아이디 또는 비밀번호 오류)'}, {"status": "error"}
                 ), 401
@@ -299,6 +310,9 @@ def create_app():
                 access_token = create_access_token(identity=user_id)
                 from database_codes.database import getUserAdmin
                 admin = getUserAdmin(user_id)
+
+                print('로그인 성공')
+                print(access_token, admin)
 
                 return jsonify(
                     {'message': '로그인 성공'}, {'status': 'success'}, {'access_token': access_token}, {'admin': admin}
@@ -591,4 +605,4 @@ if __name__ == '__main__':
     makeReviewTable()
 
     app = create_app()
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)

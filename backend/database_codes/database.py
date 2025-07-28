@@ -135,6 +135,7 @@ def makeSongScoreTable():
                 song_id int not null,
                 song_part_id int not null unique key,
                 sequence int not null,
+                song_name TEXT,
                 url TEXT not null,
                 foreign key song_score1(song_part_id) references song_part(song_part_id),
                 foreign key song_score2(song_id) references song(song_id)
@@ -858,8 +859,11 @@ def getSongScoreData(song_id, song_part_id):
         with conn.cursor() as cursor:
             # SQL 쿼리 작성
             create_table_query = """
-                    select sequence, url from song_score where song_id=%s and song_part_id=%s
+                    select sequence, url from song_score where song_name=%s and sequence=%s
                 """
+
+
+#start
 
             # 쿼리 실행
             cursor.execute(create_table_query, (song_id, song_part_id))

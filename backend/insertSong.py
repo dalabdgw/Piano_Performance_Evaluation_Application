@@ -12,15 +12,19 @@ from database_codes.database import insertSongTable
 
 # 곡 DB에 삽입 및 AWS 삽입 함수
 def insertSong(song_name, duration, composer, file_path):
-    song_name = 'chopin'
-    composer = 'hyunsung_' + composer
-    duration = 177
-    song_segment_url_list = []
-    song_name = 'chopin'
 
+    #업로드 간편화
+    song_name = 'bach'
+    composer = 'hyunsung_' + composer
+    duration = 104
+
+
+    song_segment_url_list = []
     s3_song_file_url_list = []
     print('==' * 50)
     print('곡 분할 시작..')
+
+    print(file_path)
     divided_song_list = divide_audio(file_path)
     print('곡 분할 완료')
     print()
@@ -71,6 +75,7 @@ def insertScore(song_id, song_name, image_file_path_list, song_part_id):
     print('DB에 Part 정보 삽입중..')
 
     for i in range(len(image_file_url)):
+        print('song_id=',song_id, 'score_sequence=',sequence_url[i], 'score_url=',image_file_url[i], 'song_part_id=',song_part_id)
         insertSongScoreTable(song_id=song_id, score_sequence=sequence_url[i], score_url=image_file_url[i], song_part_id=song_part_id)
     print('삽입 완료')
 
